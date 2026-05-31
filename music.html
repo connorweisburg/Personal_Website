@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weisburg Productions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Logo -->
+  <img src="images/logo.png" alt="Weisburg Productions Logo" class="logo">
+
+  <!-- Left checkerboard -->
+  <div class="checkerboard left"></div>
+
+  <!-- Right checkerboard -->
+  <div class="checkerboard right"></div>
+
+  <!-- Main content -->
+  <div class="content">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Weisburg Productions</h1>
+      <p>music & entertainment production</p>
+      <a href="#music" class="button">Explore Music</a>
+      <br />
+    </section>
+    
+    <!-- About -->
+    <section class="about">
+      <h2>About</h2>
+      <p>
+        Weisburg Productions blends professional craftsmanship with community
+        passion. Built on integrity, authenticity, and care to create music
+        that inspires and connects.
+      </p>
+    </section>
+
+    <!-- Music Catalog -->
+    <section id="music">
+      <h2>Music Catalog</h2>
+      <div class="catalog">
+
+        <div class="track">
+          <h3>The Gleamers - How it Goes</h3>
+          <p>Moody, Grungy, Uplifting, Rock</p>
+          <iframe data-testid="embed-iframe"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/0VOdfmSPNpAIUBLl9RnPSe"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div class="track">
+          <h3>Needle Found - Please</h3>
+          <p>Mournful, Melancholic, Emotional</p>
+          <iframe data-testid="embed-iframe"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/0eNEx7u2gYQuW2nadHQ2ez"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div class="track">
+          <h3>SEMPAR - Runner Up</h3>
+          <p>Upbeat, Energetic, Catchy, Indie Rock</p>
+          <iframe data-testid="embed-iframe"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/07Uq9UKL8jb0PpkLpsJMC8"
+            width="100%"
+            height="152"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <h2>Let’s Craft a Common Vision</h2>
+      <p>Reach out to collaborate or license music.</p>
+      <p>Email: connorweisburg@gmail.com</p>
+      <p>
+        <a 
+          href="https://cerulean-iridium-a80.notion.site/2fc67645e3e680139d79cd0fb5358be4?v=2fc67645e3e680439a90000c1cb1187b&pvs=74"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Click</a>
+        to see the production workflow and licensing details.
+      </p>
+    </section>
+  </div>
+
+  <!-- Link to checkerboard JS -->
+  <script src="checkerboard.js"></script>
+
+</body>
+</html>
