@@ -99,7 +99,21 @@ body.home-body {
 
   min-height: 100vh;
 }
+.profile-photo {
+  display: block;
 
+  width: 100%;
+  max-width: 500px;
+
+  margin: 24px auto;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.25);
+
+  border: 2px solid rgba(183,146,74,.25);
+}
 /* subtle pattern overlay */
 
 body.home-body::before {
