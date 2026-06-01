@@ -100,12 +100,11 @@ body.home-body {
   min-height: 100vh;
 }
 .profile-photo {
-  display: block;
-
   width: 100%;
-  max-width: 500px;
+  max-width: 350px;
 
-  margin: 24px auto;
+  display: block;
+  margin: 0 auto;
 
   border-radius: 16px;
 
