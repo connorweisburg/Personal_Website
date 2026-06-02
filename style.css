@@ -288,6 +288,58 @@ body.music-body {
   color: #111;
 }
 
+
+.music-nav {
+  background: rgba(255,255,255,.85);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.music-nav a {
+  color: #333;
+}
+
+.music-nav a:hover {
+  color: var(--brass);
+}
+
+.music-hero {
+  padding-top: 20px;
+}
+
+.music-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+}
+
+.music-tagline {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+}
+
+.music-cta {
+  margin-top: 24px;
+}
+
+.music-intro {
+  max-width: 750px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.track {
+  transition: .25s ease;
+}
+
+.track:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
 /* logo */
 
 .logo {
