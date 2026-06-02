@@ -278,7 +278,57 @@ body.home-body::before {
 
   color: rgba(236,230,215,.5);
 }
+/* =========================================================
+   PROFESSIONAL PAGE
+========================================================= */
 
+.professional-body {
+  background:
+    linear-gradient(
+      180deg,
+      #173548 0%,
+      #23485c 40%,
+      #35576d 100%
+    );
+
+  color: #eef6f8;
+}
+
+.professional-body .nav {
+  background: rgba(20, 40, 52, .85);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.professional-body .nav a {
+  color: #dbeff4;
+}
+
+.professional-body .nav a:hover {
+  color: #9ed8e5;
+}
+.prof-card {
+  padding: 32px;
+  border-radius: 18px;
+
+  backdrop-filter: blur(10px);
+
+  margin-bottom: 24px;
+}
+
+.prof-card-light {
+  background: rgba(168,198,207,.12);
+  border: 1px solid rgba(168,198,207,.15);
+}
+
+.prof-card-ocean {
+  background: rgba(53,87,109,.35);
+  border: 1px solid rgba(168,198,207,.12);
+}
+
+.prof-card-mist {
+  background: rgba(220,231,234,.08);
+  border: 1px solid rgba(220,231,234,.10);
+}
 /* =========================================================
    MUSIC PAGE
 ========================================================= */
@@ -344,7 +394,7 @@ body.music-body {
 
 .logo {
   display: block;
-  margin: 30px auto;
+  margin: 20px auto 8px auto;
   width: 200px;
   height: auto;
 }
@@ -359,28 +409,70 @@ body.music-body {
   z-index: 0;
 }
 
+.checkerboard.left,
+.checkerboard.right {
+  width: 160px;
+
+  background-image:
+
+    radial-gradient(circle, #111 2px, transparent 2px),
+    radial-gradient(circle, #111 2px, transparent 2px);
+
+  background-size:
+    28px 28px,
+    28px 28px;
+
+  background-position:
+    0 0,
+    14px 14px;
+
+  opacity: 0.18;
+}
+
+.checkerboard {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 160px;
+  z-index: 0;
+}
+
 .checkerboard.left {
   left: 0;
-  background:
-    linear-gradient(
-      45deg,
-      #111 25%, #f5f5f5 25%,
-      #f5f5f5 50%, #111 50%,
-      #111 75%, #f5f5f5 75%
-    );
-  background-size: 40px 40px;
+
+  background-image:
+    radial-gradient(circle, rgba(183,146,74,.45) 2px, transparent 2px),
+    radial-gradient(circle, rgba(183,146,74,.45) 2px, transparent 2px),
+    radial-gradient(circle, rgba(183,146,74,.25) 2px, transparent 2px),
+    radial-gradient(circle, rgba(183,146,74,.25) 2px, transparent 2px);
+
+  background-size: 28px 56px;
+  background-position:
+    0 0,
+    14px 28px,
+    14px 0,
+    0 28px;
+
+  opacity: .6;
 }
 
 .checkerboard.right {
   right: 0;
-  background:
-    linear-gradient(
-      135deg,
-      #111 25%, #f5f5f5 25%,
-      #f5f5f5 50%, #111 50%,
-      #111 75%, #f5f5f5 75%
-    );
-  background-size: 40px 40px;
+
+  background-image:
+    radial-gradient(circle, rgba(183,146,74,.45) 2px, transparent 2px),
+    radial-gradient(circle, rgba(183,146,74,.45) 2px, transparent 2px),
+    radial-gradient(circle, rgba(183,146,74,.25) 2px, transparent 2px),
+    radial-gradient(circle, rgba(183,146,74,.25) 2px, transparent 2px);
+
+  background-size: 28px 56px;
+  background-position:
+    0 0,
+    14px 28px,
+    14px 0,
+    0 28px;
+
+  opacity: .6;
 }
 
 .music-body .content {
@@ -471,4 +563,148 @@ iframe {
   .checkerboard {
     display: none;
   }
+}
+
+/* =========================================================
+   OTHER INTERESTS PAGE
+========================================================= */
+
+.other-body {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(201, 28, 38, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #050505 0%,
+      #0f0f0f 100%
+    );
+
+  color: #f2ece1;
+}
+
+/* NAV */
+
+.other-body .nav {
+  background: rgba(0,0,0,.75);
+  border-bottom: 1px solid rgba(199,164,93,.15);
+}
+
+.other-body .nav a {
+  color: #e6e0d4;
+}
+
+.other-body .nav a:hover {
+  color: #d7b979;
+}
+
+/* HERO */
+
+.other-body .hero {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.other-body h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  margin-bottom: 10px;
+}
+
+.other-body .hero p {
+  max-width: 700px;
+  margin: auto;
+
+  color: rgba(242,236,225,.75);
+
+  font-size: 1.1rem;
+}
+
+/* SECTION DIVIDER */
+
+.section-divider {
+  width: 140px;
+  height: 1px;
+
+  margin: 50px auto;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(199,164,93,.6),
+    transparent
+  );
+}
+
+/* CARDS */
+
+.other-card {
+  background: rgba(255,255,255,.03);
+
+  border: 1px solid rgba(199,164,93,.10);
+
+  border-radius: 18px;
+
+  padding: 32px;
+
+  margin-bottom: 24px;
+
+  backdrop-filter: blur(10px);
+
+  transition: all .25s ease;
+}
+
+.other-card:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(215,185,121,.30);
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.25);
+}
+
+.other-card h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  color: #d7b979;
+
+  font-size: 2rem;
+
+  margin-top: 0;
+}
+
+.other-card p {
+  color: rgba(242,236,225,.80);
+}
+
+/* OPTIONAL SUBTLE RED GLOW */
+
+.other-body::before {
+  content: "";
+
+  position: fixed;
+
+  top: -250px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 600px;
+  height: 600px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201,28,38,.08),
+      transparent 70%
+    );
+
+  pointer-events: none;
+
+  z-index: -1;
 }
