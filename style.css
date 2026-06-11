@@ -1,7 +1,12 @@
 /* =========================================================
    GLOBAL FOUNDATION
 ========================================================= */
-
+@font-face {
+font-family: "Siche";
+  src: url("fonts/Siche-Text-v.0.3-Regular-Trial.otf ") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
 :root {
   --forest: #33422e;
   --moss: #5f6f45;
@@ -24,7 +29,7 @@
 
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Siche", sans-serif;
   line-height: 1.7;
 }
 
@@ -51,8 +56,8 @@ h2 {
 h1,
 h2,
 h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
+  font-family: "Siche", serif;
+  font-weight: 80;
 }
 p {
   margin: 0 0 16px;
@@ -102,7 +107,7 @@ body.home-body {
 .profile-photo {
   display: block;
 
-  width: 100%;
+  width: min(1000px, 90%);
   max-width: auto;
 
   margin: 24px auto;
@@ -328,6 +333,16 @@ body.home-body::before {
 .prof-card-mist {
   background: rgba(220,231,234,.08);
   border: 1px solid rgba(220,231,234,.10);
+}
+
+.blog-post {
+  font-weight:300;
+}
+.blog-post summary {
+  cursor: pointer;
+  font-weight: 100; /* bold */
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 /* =========================================================
    MUSIC PAGE
