@@ -1,12 +1,12 @@
 /* =========================================================
    GLOBAL FOUNDATION
 ========================================================= */
-@font-face {
-font-family: "Siche";
+/* @font-face { */
+/* font-family: "Siche";
   src: url("fonts/Siche-Text-v.0.3-Regular-Trial.otf ") format("opentype");
   font-weight: 300;
   font-style: normal;
-}
+} */
 :root {
   --forest: #33422e;
   --moss: #5f6f45;
@@ -29,7 +29,7 @@ font-family: "Siche";
 
 body {
   margin: 0;
-  font-family: "Siche", sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.7;
 }
 
@@ -56,7 +56,7 @@ h2 {
 h1,
 h2,
 h3 {
-  font-family: "Siche", serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 80;
 }
 p {
