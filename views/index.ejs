@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Home | Weisburg</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="home-body">
+
+  <!-- Navigation -->
+  <%- include("partials/nav") %>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hi, I'm Connor</h1>
+    <img
+      src="/images/Photo_4.jpg"
+      alt="Connor Weisburg"
+      class="profile-photo"
+    />
+    <p>A creative exploring music, systems, and storytelling.</p>
+
+    <a class="cta" href="#story">Explore Me</a>
+  </section>
+
+  <div class="content">
+
+    <!-- My Story -->
+    <section id="story" class="card green-card">
+      <h2>My Story</h2>
+      <p>
+        I grew up in Colorado, dreaming of being a cowboy. Yet here I am, in LA, making music, making money, and making the most of every minute.
+      </p>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="card blue-card">
+      <h2>Philosophy</h2>
+      <p>
+        I value depth over speed, consistency over intensity,
+        and intention over reaction. Do what you must do and do it well. 
+      </p>
+    </section>
+
+    <!-- Snapshots -->
+    <section class="card brown-card">
+      <h2>Snapshots</h2>
+
+      <div class="snapshot-grid">
+        <div class="snapshot">
+          <img src="/images/photo_2.JPG" alt="Photo 2">
+        </div>
+
+        <div class="snapshot">
+          <img src="/images/Sunglasses_suit.png" alt="Sunglasses Suit">
+        </div>
+
+        <div class="snapshot">
+          <img src="/images/self_bass_studio.png" alt="Bass Studio">
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing -->
+    <section class="card accent-card">
+      <h2>What this is</h2>
+      <p>
+        A living record of work, ideas, and exploration.
+      </p>
+    </section>
+
+  </div>
+
+</body>
+</html>

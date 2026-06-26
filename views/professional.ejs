@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Professional | Connor Weisburg</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="professional-body">
+
+  <%- include("partials/nav") %>
+
+  <div class="content">
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <h1>Professional</h1>
+
+      <p>
+        Building systems, solving problems,
+        and helping complexity become clarity.
+      </p>
+    </section>
+
+    <!-- CURRENT FOCUS -->
+
+    <section class="prof-card prof-card-light">
+      <h2>Current Focus</h2>
+
+      <p>
+        Get others to ask me for my business card.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE -->
+
+    <section class="prof-card prof-card-ocean">
+      <h2>Experience</h2>
+
+      <p>
+        A timeline of professional experiences,
+        leadership opportunities, internships,
+        and meaningful projects.
+      </p>
+
+      <p>
+        This will eventually serve as the narrative of how
+        my career has evolved over time.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="prof-card prof-card-mist">
+      <h2>Projects</h2>
+
+      <p>
+        Technical projects, systems thinking, and field notes from my work.
+      </p>
+
+      <div class="blog-feed">
+        <% posts.forEach(post => { %>
+
+          <a class="blog-card" href="/professional/<%= post.slug %>">
+
+            <h3><%= post.title %></h3>
+
+            <% if (post.excerpt) { %>
+              <p><%= post.excerpt %></p>
+            <% } %>
+
+            <small>
+              <%= new Date(post.date).toDateString() %>
+            </small>
+
+          </a>
+
+        <% }) %>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+
+    <section class="prof-card prof-card-light">
+      <h2>Skills & Interests</h2>
+
+      <p>
+        Technologies, tools, methodologies,
+        and domains where I have experience.
+      </p>
+
+      <p>
+        I'll also include the areas I'm actively exploring
+        and hoping to develop further.
+      </p>
+    </section>
+
+    <!-- RESUME -->
+
+    <section class="prof-card prof-card-ocean">
+      <h2>Resume & Contact</h2>
+
+      <p>
+        Downloadable resume, LinkedIn profile,
+        portfolio materials, and professional contact information.
+      </p>
+    </section>
+
+  </div>
+
+</body>
+</html>

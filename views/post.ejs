@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= post.title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="professional-body">
+
+  <%- include("partials/nav") %>
+
+  <div class="content">
+
+    <article class="blog-post-full">
+
+      <h1><%= post.title %></h1>
+
+      <p class="meta">
+        <%= new Date(post.date).toDateString() %>
+      </p>
+
+      <div class="blog-content">
+        <%- post.content %>
+      </div>
+
+    </article>
+
+  </div>
+
+</body>
+</html>
