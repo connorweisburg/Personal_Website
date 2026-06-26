@@ -16,7 +16,7 @@
     "express": "^5.2.1",
     "gray-matter": "^4.0.3",
     "grey-matter": "^0.0.0",
-    "marked": "^18.0.5",
+    "marked": "^4.3.0",
     "marker": "^0.1.2"
   },
   "devDependencies": {
