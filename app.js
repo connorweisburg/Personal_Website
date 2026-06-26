@@ -1,3 +1,5 @@
+console.log("MARKED VERSION:", require("marked/package.json").version);
+
 const express = require("express");
 const path = require("path");
 
