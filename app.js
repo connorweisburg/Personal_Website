@@ -10,7 +10,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // EJS setup
 app.set("view engine", "ejs");
+app.set("views", path.join(process.cwd(), "views"));
 
+app.use(express.static(path.join(process.cwd(), "public")));
 // Home
 app.get("/", (req, res) => {
     res.render("index");
