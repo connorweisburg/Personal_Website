@@ -1,0 +1,64 @@
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Shop | Weisburg</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="shop-body">
+<%- include("partials/nav") %>
+<h1>Shop</h1>
+
+<div id="product-grid" class="product-grid"></div>
+
+<script>
+async function loadProducts() {
+    const res = await fetch("/shop/products");
+    const products = await res.json();
+
+    const grid = document.getElementById("product-grid");
+
+    grid.innerHTML = products.map(p => `
+        <div class="product-card">
+            <img src="${p.image || ''}" alt="${p.name}" />
+            
+            <h3>${p.name}</h3>
+            
+            <p class="desc">
+                ${p.description || ""}
+            </p>
+
+            <div class="price">
+                $${(p.price / 100).toFixed(2)}
+            </div>
+
+            <button onclick="buy('${p.priceId}')">
+                Buy
+            </button>
+        </div>
+    `).join("");
+}
+
+async function buy(priceId) {
+    const res = await fetch("/shop/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ priceId })
+    });
+
+    const data = await res.json();
+    window.location = data.url;
+}
+
+loadProducts();
+</script>
+
+</body>
