@@ -63,12 +63,12 @@ app.use("/shop", require("./routes/shop"));
 
 
 
-if (process.env.NODE_ENV !== "production") {
-    const PORT = 3000;
+// if (process.env.NODE_ENV !== "production") {
+//     const PORT = 3000;
 
-    app.listen(PORT, () => {
-        console.log(`Server running at http://localhost:${PORT}`);
-    });
-}
+//     app.listen(PORT, () => {
+//         console.log(`Server running at http://localhost:${PORT}`);
+//     });
+// }
 
 module.exports = app;
