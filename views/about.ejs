@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Home | Weisburg</title>
+  <title>About | Weisburg</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,73 +13,94 @@
 
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body class="home-body">
 
-  <!-- Navigation -->
   <%- include("partials/nav") %>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Hi, I'm Connor</h1>
-    <img
-      src="/images/Photo_4.jpg"
-      alt="Connor Weisburg"
-      class="profile-photo"
-    />
-    <p>A creative exploring music, systems, and storytelling.</p>
+  <main class="about-page">
 
-    <a class="cta" href="#story">Explore Me</a>
-  </section>
+    <section class="about-intro">
 
-  <div class="content">
+      <div class="about-header">
+        <h1>Hi, I'm Connor</h1>
+        <p class="tagline">
+          A creative exploring music, systems, and storytelling.
+        </p>
+      </div>
 
-    <!-- My Story -->
-    <section id="story" class="card green-card">
-      <h2>My Story</h2>
-      <p>
-        I grew up in Colorado, dreaming of being a cowboy. I was a scrappy kid who was obsessed with music, puzzles, and stories. Eventually, I chased those obsessions west to Los Angeles.
-        
-        There are secret codes and symbols out here. There are hidden messages wrapped in sacred geometry and buried along forgotten melodies. There are one thousand epiphanies waiting to be unlocked with the right key. My purpose is to uncover the wonder that has been lost.
-      </p>
+      <div class="about-content">
+
+        <div class="about-photo">
+          <img
+            src="/images/Photo_4.jpg"
+            alt="Connor Weisburg"
+            class="profile-photo"
+          />
+        </div>
+
+        <div class="about-text">
+
+          <section class="card green-card">
+            <h2>My Story</h2>
+
+            <p>
+              I grew up in Colorado, dreaming of being a cowboy. I was a scrappy kid who became obsessed with music, puzzles, and stories. After recieving a bachelor's degree in Mathematics at CU Boulder, I held an artist residency at the Oakley Art House, and I eventually chased those obsessions west to Los Angeles, where I currently reside. 
+            </p>
+
+          </section>
+
+        </div>
+
+      </div>
+
     </section>
-
-    <!-- Philosophy -->
     <section class="card blue-card">
-      <h2>Philosophy</h2>
-      <p>
-        I value depth over speed, consistency over intensity,
-        and intention over reaction. Do what you must do and do it well. 
-      </p>
-    </section>
 
-    <!-- Snapshots -->
+            <h2>Values</h2>
+
+            <p>
+              I value depth over speed, consistency over intensity, and intention over reaction.
+            </p>
+
+            <p>
+              Do what you must do and do it well.
+            </p>
+
+          </section>
     <section class="card brown-card">
+
       <h2>Snapshots</h2>
 
       <div class="snapshot-grid">
+
         <div class="snapshot">
           <img src="/images/photo_2.JPG" alt="Photo 2">
         </div>
 
         <div class="snapshot">
-          <img src="/images/Sunglasses_suit.png" alt="Sunglasses Suit">
+          <img src="/images/Sunglasses_suit.png" alt="Connor in suit">
         </div>
 
         <div class="snapshot">
-          <img src="/images/self_bass_studio.png" alt="Bass Studio">
+          <img src="/images/self_bass_studio.png" alt="Bass studio">
         </div>
+
       </div>
+
     </section>
 
-    <!-- Closing -->
     <section class="card accent-card">
-      <h2>What this is</h2>
+
+      <h2>Philosophy</h2>
+
       <p>
-        A living record of work, ideas, and exploration.
+        There are secret codes and symbols out here. Hidden messages wrapped in sacred geometry and buried beneath forgotten melodies. There are one thousand epiphanies waiting to be unlocked with the right key. My purpose is to uncover the wonder that has been lost.
       </p>
+
     </section>
 
-  </div>
+  </main>
 
 </body>
 </html>

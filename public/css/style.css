@@ -88,7 +88,7 @@ p {
 }
 
 /* =========================================================
-   HOME PAGE
+   ABOUT PAGE
 ========================================================= */
 
 body.home-body {
@@ -101,24 +101,9 @@ body.home-body {
     );
 
   color: var(--parchment);
-
   min-height: 100vh;
 }
-.profile-photo {
-  display: block;
 
-  width: min(1000px, 90%);
-  max-width: auto;
-
-  margin: 24px auto;
-
-  border-radius: 16px;
-
-  box-shadow:
-    0 12px 30px rgba(0,0,0,.25);
-
-  border: 2px solid rgba(183,146,74,.25);
-}
 /* subtle pattern overlay */
 
 body.home-body::before {
@@ -142,7 +127,9 @@ body.home-body::before {
   z-index: -1;
 }
 
-/* HOME NAV */
+/* =========================================================
+   NAV
+========================================================= */
 
 .home-body .nav {
   background: rgba(24, 23, 20, 0.85);
@@ -157,48 +144,64 @@ body.home-body::before {
   color: var(--brass);
 }
 
-/* HERO */
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
 
-.home-body .hero {
-  text-align: center;
-  padding: 60px 20px 40px;
+.about-page {
+  width: min(1200px, 92%);
+  margin: 60px auto 80px;
 }
 
-.home-body .hero h1 {
-  color: var(--parchment);
+.about-header {
+  margin-bottom: 48px;
+}
+
+.about-header h1 {
+  margin-bottom: 12px;
   letter-spacing: -2px;
+  color: var(--parchment);
+  font-size: clamp(3rem, 6vw, 4.5rem);
 }
 
-.home-body .hero p {
+.about-header .tagline {
+  font-size: 1.25rem;
+  max-width: 650px;
   color: rgba(236,230,215,.85);
-  font-size: 1.2rem;
 }
 
-/* CTA */
-
-.cta {
-  display: inline-block;
-
-  margin-top: 24px;
-  padding: 14px 24px;
-
-  background: var(--brass);
-  color: var(--charcoal);
-
-  text-decoration: none;
-  font-weight: bold;
-
-  border-radius: 10px;
-
-  transition: 0.25s ease;
+.about-content {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 48px;
+  align-items: start;
 }
 
-.cta:hover {
-  transform: translateY(-2px);
-  background: #c7a45d;
+.about-photo {
+  align-self: start;
 }
 
-/* CONTENT CARDS */
+.profile-photo {
+  width: 100%;
+  display: block;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 16px 40px rgba(0,0,0,.35);
+
+  border: 2px solid rgba(183,146,74,.25);
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* =========================================================
+   CONTENT CARDS
+========================================================= */
 
 .card {
   padding: 32px;
@@ -207,7 +210,7 @@ body.home-body::before {
 
   backdrop-filter: blur(8px);
 
-  transition: 0.3s ease;
+  transition: transform .3s ease;
 }
 
 .card:hover {
@@ -233,6 +236,8 @@ body.home-body::before {
 .brown-card {
   background: rgba(75,67,48,.75);
   border: 1px solid rgba(183,146,74,.12);
+
+  margin-top: 42px;
 }
 
 /* brass accent */
@@ -240,18 +245,9 @@ body.home-body::before {
 .accent-card {
   background: rgba(141,111,63,.18);
   border: 1px solid rgba(183,146,74,.30);
+
+  margin-top: 42px;
 }
-
-/* CARD TEXT */
-
-.home-body h2 {
-  color: var(--parchment);
-}
-
-.home-body p {
-  color: rgba(236,230,215,.85);
-}
-
 /* =========================================================
    SNAPSHOTS
 ========================================================= */
@@ -259,12 +255,12 @@ body.home-body::before {
 .snapshot-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 20px;
+  gap: 18px;
+  margin-top: 24px;
 }
 
 .snapshot {
-  height: 160px;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
 
   border-radius: 12px;
@@ -284,6 +280,59 @@ body.home-body::before {
   height: 100%;
   object-fit: cover;
   display: block;
+
+  transition: transform .35s ease;
+}
+
+.snapshot:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.home-body h2 {
+  color: var(--parchment);
+  margin-bottom: 16px;
+}
+
+.home-body p {
+  color: rgba(236,230,215,.85);
+  line-height: 1.8;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-page {
+    width: min(92%, 700px);
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    position: static;
+  }
+
+  .about-header {
+    text-align: center;
+  }
+
+  .about-header .tagline {
+    margin: 0 auto;
+  }
+
 }
 /* =========================================================
    PROFESSIONAL PAGE
